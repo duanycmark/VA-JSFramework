@@ -1,0 +1,8 @@
+[
+  {
+    "name": "单页面应用(类似于OA系统)",
+    "description": "点击查看\n单页面应用\n页面使用less编写样式",
+    "demoHref": "./template/fullScreenApp/fullScreen.html"
+  }
+
+]

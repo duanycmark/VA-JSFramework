@@ -1,0 +1,53 @@
+/*
+    VirusAnimation-CSS3-RotateStyle
+
+    Created by duanyc
+
+    Update : 2017/08/17
+*/
+
+/*--------- loading text ---------*/
+.loading_initBox span {
+    font-family: "Microsoft YaHei";
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-align: center;
+    min-width: 106px;
+    height: 60px;
+    font-size: 16px;
+    color: #4e535d;
+    font-weight: bolder;
+    text-shadow: 0 0 7px #d5d5d5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*------ loading transformBox -------*/
+.loading_initBox_lod {
+    width: auto;
+    height: auto;
+    transform-origin: center center;
+}
+
+/*------------- loading transform ---------------*/
+.loading_initBox_lod i {
+    font-size: 80px;
+    color: #657079;
+    margin-left: 15px;
+    animation: loadingScale 2s infinite linear;
+    line-height: 100px;
+}
+
+/*--------------- Animation --------------------*/
+@keyframes loadingScale {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

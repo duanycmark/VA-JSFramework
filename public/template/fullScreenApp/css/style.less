@@ -1,0 +1,170 @@
+@import "baseStyle.less";
+
+body, html {
+  .full();
+  min-width: 1290px;
+}
+
+.V_content {
+
+  .box(100%, 100%);
+  .transform-style();
+  background-color: @gray-light;
+
+  .V_nav {
+
+    .box(100%, 80px);
+    padding-left: 5%;
+    background-color: @gray-darker;
+    margin-bottom: 0;
+
+    .logo {
+
+      .box(80px, 100%);
+      .user-select();
+      float: left;
+
+      a {
+
+        .box(100%, 100%);
+        position: relative;
+        img {
+
+          .box(100%, 100%);
+          float: left;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &:before {
+          z-index: 2;
+          content: 'V';
+          height: 100%;
+          font-size: 8.7rem;
+          color: #78f87b;
+          position: absolute;
+          top: -21px;
+          left: 12px;
+        }
+      }
+
+    }
+
+    .navbar-nav {
+
+      .box(800px, 100%);
+      margin-left: 15%;
+      padding-left: 0;
+
+      li {
+
+        .box(150px, 100%);
+        float: left;
+        margin-right: 15px;
+        text-align: center;
+        padding: 15px;
+        font-size: 18px;
+        .user-select();
+        cursor: pointer;
+
+        span {
+
+          .box(100%, 100%);
+          line-height: 48px;
+          color: #fff;
+
+          &:active {
+            .btn-active(#b7b7b7);
+          }
+          &:focus {
+            .btn-focus(#333, #e6e6e6);
+          }
+        }
+      }
+      .active span {
+        border-bottom: 3px solid #ccc;
+      }
+
+    }
+
+  }
+
+  //content
+  .V_content {
+    background-color: seagreen;
+    position: relative;
+
+    .V_leftFunction {
+      .box(450px, 100%);
+      position: relative;
+
+      ul {
+        z-index: 2;
+        .box(100px, 100%, inline-block);
+        background-color: saddlebrown;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding-top: 50px;
+        padding-left: 0;
+        li {
+          .box(100%, 80px);
+          margin-top: 20px;
+          cursor: pointer;
+          .translate(-300px, 0);
+          .user-select();
+          .transition(.566s, transform);
+          span {
+            .box(100%, 100%);
+            line-height: 80px;
+            font-size: 16px;
+            color: seagreen;
+            text-align: center;
+          }
+
+          &:hover {
+            background-color: @gray-lighter;
+          }
+
+          &:active {
+            .btn-active(#b7b7b7);
+          }
+          &:focus {
+            .btn-focus(#333, #e6e6e6);
+          }
+        }
+        .active span {
+          background-color: @gray-lighter;
+        }
+      }
+
+      .V_leftFunction_view {
+
+        .box(350px, 100%, inline-block);
+        float: right;
+        font-size: 18px;
+
+        .V_leftFunction_view_child {
+          z-index: 1;
+          display: none;
+          .box(100%, 100%);
+          .transition(1.7864s);
+          .translate(-800px, 0);
+          background-color: slateblue;
+        }
+
+      }
+
+    }
+  }
+
+}
+
+@keyframes leftFunction {
+  form {
+    .translate(-300px, 0);
+  }
+  to {
+    .translate(0, 0)
+  }
+}

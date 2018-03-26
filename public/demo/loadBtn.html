@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>带有加载动画的按钮</title>
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="baseLogo.min.css">
+    <!-- Highlighting -->
+    <link rel="stylesheet" href="../libs/highlight/styles/androidstudio.css">
+    <script src="../libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../libs/jQuery/jquery-2.0.2.min.js"></script>
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../libs/VirusAnimation/js/VA.js"></script>
+
+    <style>
+
+        body, html {
+            height: auto;
+        }
+
+        *:not(i,span) {
+            font-family: "Microsoft YaHei" !important;
+        }
+
+        ::selection {
+            background-color: rgba(198, 73, 45, 0.9);
+            color: #fff;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .page-header {
+            margin: 20px 0;
+        }
+
+        .highlight pre code {
+            font-size: 16px;
+        }
+
+        .pageUp {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 3%;
+            bottom: 8%;
+            transition: all .75s;
+            transform: translateX(300px);
+            background-color: rgba(31, 22, 50, 0.8);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .pageUp i {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 6rem;
+            color: #bbe992;
+        }
+
+        .pageUp i:before {
+            position: absolute;
+            top: -4px;
+            left: -1px;
+        }
+
+        .demonstrate {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 40px;
+            margin-bottom: 100px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .radio {
+            padding-left: 0;
+        }
+
+        .radio input[type="radio"] {
+            margin-left: 0;
+        }
+
+        .demonstrate .col-lg-12 .radio {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .radio div {
+            margin-right: 30px;
+        }
+
+        .radio div [type="radio"] {
+            margin-top: 3px;
+        }
+
+        kbd {
+            padding: 2px 4px;
+            font-size: 90%;
+            color: #fff;
+            background-color: #333;
+            border-radius: 3px;
+            font-family: Consolas;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+        }
+
+        .bs-callout {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #eee;
+            border-left-width: 5px;
+            border-radius: 3px;
+        }
+
+        .bs-callout > p,
+        .bs-callout > ol,
+        .bs-callout > ul {
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .bs-callout h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .bs-callout-danger {
+            border-left-color: #d9534f;
+        }
+
+        .bs-callout-danger h4 {
+            color: #d9534f;
+        }
+
+        .bs-callout-warning {
+            border-left-color: #f0ad4e;
+        }
+
+        .bs-callout-warning h4 {
+            color: #f0ad4e;
+        }
+
+        .bs-callout-info {
+            border-left-color: #5bc0de;
+        }
+
+        .bs-callout-info h4 {
+            color: #5bc0de;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <recommend></recommend>
+
+            <div class="bs-docs-section">
+                <h1 class="page-header">带有加载动画的Btn</h1>
+                <h3>组件激活方法</h3>
+                <p>通过指令激活或关闭指定按钮并为其添加动画，可为动画修改颜色。</p>
+
+                <div class="bs-callout bs-callout-info">
+                    <h4>兼容性</h4>
+                    <p>兼容IE低版本，火狐，谷歌。</p>
+                </div>
+
+                <h5><code>JS代码</code></h5>
+
+                <div class="highlight">
+                    <pre>
+                        <code>
+                            VA('#id').loadBtn(true, 'red');
+                        </code>
+                    </pre>
+                </div>
+
+                <p>通过传参<code>true</code> 或 <code>false</code>来指定动画是否激活。</p>
+                <p>当动画激活时，按钮会变为<code>disabled</code>状态。</p>
+                <p>可通过修改第二个参数来控制动画颜色</p>
+                <p>当按钮进入<code>disabled</code>时，按钮透明度为0.65，因此淡色可能会显示有偏差。</p>
+
+                <br>
+
+                <p>同时支持第三个参数来指定加载时显示的文字内容，当激活时会copy元素内容，并在取消动画时还原内容。</p>
+
+                <hr>
+                <h4>实例 ：</h4>
+                <div class="demonstrate">
+
+                    <div class="col-lg-12">
+
+                        <div class="container">
+
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-default">
+                                    我只是个测试按钮，别点我
+                                    <i class="fa fa-tag"></i>
+                                </button>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-md btn-success">加载</button>
+                                <button class="btn btn-md btn-danger">取消</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- load template -->
+<template></template>
+
+
+<script>
+
+    $('.btn-success').click(function () {
+        V('.btn-default').loadBtn(true, 'tomato', '加载中')
+    });
+
+    $('.btn-danger').click(function () {
+        V('.btn-default').loadBtn(false);
+    });
+
+</script>
+
+<!-- template -->
+<script>
+
+    $.get('./RECOMMEND-TEMPLATE.ejs', function (res, status) {
+        $('recommend').replaceWith(res);
+    });
+
+    $.get('./TOINDEX-TEMPLATE.ejs',function (res, status) {
+        $('template').replaceWith(res);
+    })
+
+</script>
+
+</body>
+</html>

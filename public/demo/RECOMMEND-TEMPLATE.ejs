@@ -1,0 +1,43 @@
+<div class="bs-docs-section">
+    <h1 class="page-header">VA框架</h1>
+
+    <div class="bs-callout bs-callout-danger">
+        <h4>文件路径注意</h4>
+        <p><code>VirusAnimation框架</code>文件夹内文件名字与文件夹名字不能更改，框架本身只用在页面中引用<code>VA.js</code>即可。</p>
+        <p>所有指令所需依赖文件都为动态添加，从而减少页面初始化时请求量。</p>
+    </div>
+
+    <div class="bs-callout bs-callout-warning">
+        <h4>入口</h4>
+        <p>在框架中我提供了两种入口方便使用。分别为 <code>VA()</code> 和 <code>V()</code>。</p>
+        <p>在<code>VA()</code>选择器内传参可为指定元素添加事件。</p>
+        <p>同时选择器内支持数据解构。</p>
+        <p>例如：</p>
+        <div class="highlight">
+            <pre>
+                <code class="hljs perl">
+                        VA('#nodeId@background:rgba(0, 0, 0, 0.8)').loadingAnimation('svg')
+                </code>
+            </pre>
+        </div>
+        <p>可以让元素激活加在动画时同时设置背景动画的底色为 <code>rgba(0, 0, 0, 0.8)</code>。</p>
+        <h6>
+            <small class="pull-right">— 更多解构方式等到实际项目中才会对应开发</small>
+        </h6>
+    </div>
+
+    <div class="bs-callout bs-callout-info">
+        <h4>框架依赖</h4>
+
+        <p>
+           框架内<code>字体图标</code> 基于 <code>font-awesome 4.0.2</code>。
+        </p>
+
+        <p>
+            <code>JS</code> 组件基于 <code>jQuery 2.0.2 版本</code>。
+        </p>
+
+        <!--<p>因此在页面引入 <code>VA.js</code> 前引入 <code>font-awesome，jQuery</code>。</p>-->
+    </div>
+
+</div>

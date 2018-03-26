@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VirusAnimation Demo</title>
+
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+
+    <script src="../libs/jQuery/jquery-2.0.2.min.js"></script>
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" V-connect-link="css3LoadingAnimation"-->
+    <!--href="../libs/VirusAnimation/css/va_animation_circleScale_style.css">-->
+
+    <!-- test css -->
+    <!--<link rel="stylesheet" href="libs/VirusAnimation/css/va_animation_rotate_style.css">-->
+    <!--<link rel="stylesheet" href="libs/VirusAnimation/css/va_module_stylesheet.css">-->
+
+    <!--<script src="../../libs/VirusAnimation/dependent/autocomplete/jquery.autocomplete.js"></script>-->
+
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei";
+            background-color: #444b4f;
+        }
+
+        a,
+        a:hover,
+        a:focus {
+            text-decoration: none;
+        }
+
+        .a {
+            display: block;
+            width: 300px;
+            height: 300px;
+            font-size: 88px;
+            color: #000;
+            text-align: center;
+            /*line-height: 300px;*/
+            margin: 0 auto;
+            clear: both;
+            overflow: hidden;
+            position: relative;
+            text-shadow: 9px 9px 10px #d6d6d6;
+        }
+
+        .a:before {
+            content: '\2714';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 172px;
+            top: 74px;
+            color: #000;
+        }
+
+        span{
+            color: #ffd967;
+        }
+    </style>
+
+    <!-- style -->
+    <style type="text/css">.V_dropdown-menu {
+        display: none;
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+<div class="container">
+    <h1 class="">这只是调试页面，丑点没事！！！！</h1>
+
+    <div class="row">
+
+        <!-- loading -->
+        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 " style="z-index: 99999999">
+            <button class="btn btn-primary col-lg-12" id="start">
+                加载动画
+            </button>
+        </div>
+
+        <!-- loading -->
+        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6" style="z-index: 99999999">
+            <button class="btn btn-danger col-lg-12" id="delete">
+                隐藏动画
+            </button>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- dropDown -->
+    <div class="row">
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <!-- dropDown -->
+            <div class="V_dropdown">
+
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+
+                <ul class="V_dropdown-menu" V-labelledby="#dropdownMenu">
+
+                    <li role="presentation">
+                        <span role="menuitem" tabindex="-1">
+                            Action
+                        </span>
+                    </li>
+
+                    <li role="presentation">
+                        <span role="menuitem" tabindex="-1">
+                            Another action
+                        </span>
+                    </li>
+
+                    <li role="presentation">
+                        <span role="menuitem" tabindex="-1">
+                            Something else here
+                        </span>
+                    </li>
+
+                    <li role="presentation" class="divider"></li>
+
+                    <li role="presentation">
+                        <span role="menuitem" tabindex="-1">
+                            Separated link
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- fullScreen -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <button class="btn btn-success VA_fullScreen">
+                <i class="glyphicon glyphicon-fullscreen"></i>
+            </button>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <button type="button" class="btn btn-default" id="example" data-toggle="tooltip" data-placement="bottom"
+                    title="button">
+                Tooltip
+            </button>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- css -->
+    <div class="row">
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <input type="checkbox" id="checkbox" class="V_checkBox_reset">
+            <label for="checkbox" class="pull-left"></label>
+            <span class="pull-left">　选择</span>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label class="pull-left">
+                <input type="radio" name="radio">
+                <span>单选1</span>
+            </label>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label class="pull-left">
+                <input type="radio" name="radio">
+                <span>单选2</span>
+            </label>
+        </div>
+
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="row">
+        <p class="a">Nike</p>
+    </div>
+
+    <br>
+
+    <!-- accordion -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- accordion start -->
+            <div class="panel-group" id="accordion" style="width: 50%;margin: 0 auto;">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf
+                            moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                            eiusmod.
+                            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                            assumenda
+                            shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                            sapiente ea
+                            proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                            raw denim
+                            aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                            VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                Collapsible Group Item #2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf
+                            moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                            eiusmod.
+                            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                            assumenda
+                            shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                            sapiente ea
+                            proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                            raw denim
+                            aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                            VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                Collapsible Group Item #3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf
+                            moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                            eiusmod.
+                            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                            assumenda
+                            shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                            sapiente ea
+                            proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                            raw denim
+                            aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                            VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- accordion end -->
+        </div>
+    </div>
+
+    <br>
+
+    <!-- autoComplete -->
+    <div class="row">
+        <!-- search input start -->
+        <div class="input-group" style="width: 70%;margin: 0 auto;">
+
+            <input type="text" class="form-control" placeholder="Search"
+                   V-searchInput="#prompt"
+                   V-searchInput-maxHeight="200"
+                   V-searchInput-listDirection="down"
+                   V-searchInput-method="GET">
+
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    Go!
+                </button>
+            </span>
+
+            <!--<div class="V_searchInput_prompt" id="prompt">-->
+            <!--<span>百度啊</span>-->
+            <!--<span>京东啊</span>-->
+            <!--<span>苏宁易购啊</span>-->
+            <!--<span>淘宝啊</span>-->
+            <!--<span>啊啊啊</span>-->
+            <!--</div>-->
+        </div>
+        <!-- search input end -->
+    </div>
+
+    <br>
+
+    <!-- img upload -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group V_fileInputGroup">
+                <input type="file" class="form-control" name="file" value="上传图片" accept="image/*" V-fileInput="#image">
+                <i class="fa fa-picture-o"></i>
+                <span>点击上传图片</span>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <img src="../images/google.jpg" id="image" width="50%" alt="img" style="display: block;margin: 0 auto;">
+        </div>
+    </div>
+
+    <br>
+
+    <!-- delete input -->
+    <div class="row">
+        <!-- delete input start -->
+            <div class="form-group">
+                <input type="text" V-deleteInput class="form-control" placeholder="带有删除的输入框" style="height:33px;">
+                <!--<i class="fa fa-times-circle-o V_delete_input"></i>-->
+            </div>
+        <!-- delete input end -->
+    </div>
+</div>
+
+
+<!-- modal start -->
+<!--<div class="VA_modal" V-modal="user">-->
+
+<!--<div class="VA_dialog" VA-modal-id="myModal">-->
+
+<!--<div class="VA_modal_title">-->
+<!--<div>-->
+<!--<i class="fa fa-exclamation"></i>-->
+<!--<span>modal Title</span>-->
+<!--</div>-->
+<!--<i class="fa fa-times" VA-modal-btn="cancel"></i>-->
+<!--</div>-->
+
+<!--<div class="VA_modal_content">-->
+<!--<span class="VA_modal_content_placeholder">-->
+<!--是否隐藏模态框？？？-->
+<!--</span>-->
+<!--</div>-->
+
+<!--<div class="VA_modal_footer">-->
+<!--<div class="VA_modal_btnGroups">-->
+<!--<button class="VA_btn" VA-modal-btn="cancel">取消</button>-->
+<!--<button class="VA_btn" VA-modal-btn="confirm">确认</button>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+
+<!--</div>-->
+
+<!-- backdrop -->
+<!--<div class="alertModal_backdrop"></div>-->
+<!-- modal end -->
+
+
+
+
+<!-- VirusAnimation -->
+<script src="../libs/VirusAnimation/js/VA.js"></script>
+<script src="test-page.js"></script>
+
+</body>
+</html>

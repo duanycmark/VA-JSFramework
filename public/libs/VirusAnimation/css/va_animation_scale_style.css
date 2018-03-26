@@ -1,0 +1,56 @@
+/*
+    VirusAnimation-CSS3-Scale-style
+
+    Created by duanyc
+
+    Update : 2017/08/17
+
+*/
+/*--------- loading text ---------*/
+.loading_initBox span {
+    font-family: "Microsoft YaHei";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: #4e535d;
+    font-weight: bolder;
+    text-shadow: 0 0 7px #d5d5d5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*--------- loading transform ---------*/
+.loading_initBox_circle {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(34, 34, 34, 0.9);
+    animation: loading 1.75s infinite ease-in-out;
+}
+
+.circle_1 {
+    animation-delay: -1.6s;
+    -webkit-animation-delay: -1.6s;
+}
+
+.circle_2 {
+    animation-delay: -0.32s;
+    -webkit-animation-delay: -0.32s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(.0);
+    }
+
+    80% {
+        transform: scale(.5);
+    }
+
+    100% {
+        transform: scale(.0);
+    }
+}

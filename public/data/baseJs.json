@@ -1,0 +1,47 @@
+[
+  {
+    "name": "模态框组件",
+    "description": "通过指令激活html现有的模态框\n或者动态创建提示模态框",
+    "demoHref": "./demo/modal.html"
+  },
+  {
+    "name": "下拉框组件",
+    "description": "手动激活下拉框组件，可选择向上或向下弹出",
+    "demoHref": "./demo/dropDown.html"
+  },
+  {
+    "name": "输入框自动补全",
+    "description": "根据输入内容对数据进行匹配，讲匹配的内容动态生成在列表中",
+    "demoHref": "./demo/autoComplete.html"
+  },
+  {
+    "name": "带有清空内容按钮的输入框",
+    "description": "当输入框输入内容时，可根据输入框大小在右侧生成删除按钮",
+    "demoHref": "./demo/deleteInput.html"
+  },
+  {
+    "name": "加载动画",
+    "description": "页面加载时或请求数据时显示出不同的等待动画",
+    "demoHref": "./demo/loading.html"
+  },
+  {
+    "name": "加载按钮",
+    "description": "点击时按钮添加加载动画",
+    "demoHref": "./demo/loadBtn.html"
+  },
+  {
+    "name": "系统提示框",
+    "description": "用于页面右上角提示内容。",
+    "demoHref": "./demo/prompt.html"
+  },
+  {
+    "name": "上传预览功能",
+    "description": "可实现上传图片后在线预览，后期会增加多文件上传同时预览",
+    "demoHref": "./demo/fileLoad.html"
+  },
+  {
+    "name": "全屏页面",
+    "description": "通过类名使元素注册点击事件达到切换页面是否全屏",
+    "demoHref": "./demo/fullScreen.html"
+  }
+]

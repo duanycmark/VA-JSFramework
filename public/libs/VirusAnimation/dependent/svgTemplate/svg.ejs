@@ -1,0 +1,25 @@
+<style>
+    .V_base_svg_circular {
+        width: 42px;
+        height: 42px;
+        animation: base_svg_loading_rotate 1s linear infinite;
+    }
+
+    @keyframes base_svg_loading_rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .V_base_svg_path {
+        animation: loading-dash 1.5s ease-in-out infinite;
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: 0;
+        stroke-width: 2;
+        stroke: #20a0ff;
+        stroke-linecap: round;
+    }
+</style>
+<svg viewBox="25 25 50 50" class="V_base_svg_circular">
+    <circle cx="50" cy="50" r="20" fill="none" class="V_base_svg_path"></circle>
+</svg>

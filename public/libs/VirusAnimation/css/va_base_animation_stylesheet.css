@@ -1,0 +1,47 @@
+/*
+    VirusAnimation-CSS3-base-style
+
+    Created by duanyc
+
+    Update : 2017/10/24
+
+*/
+
+/*--------- loading mark ---------*/
+.loading_initBox {
+    z-index: 9999999 !important;
+    display: block;
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    cursor: progress;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*--------- loading center ---------*/
+.loading_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------- loading transformBox ---------*/
+.loading_initBox_lod {
+    width: auto;
+    height: auto;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+

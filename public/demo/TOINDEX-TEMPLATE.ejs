@@ -1,0 +1,36 @@
+<!-- logo -->
+<div class="modal_logo">
+    <a class="navbar-brand V_navBar_brand" href="../../">
+        <img src="../images/logo.png" alt="logo" title="VirusAnimation">
+    </a>
+</div>
+
+<!-- to top -->
+<div class="pageUp" id="pageUp">
+    <i class="fa fa-arrow-circle-up"></i>
+</div>
+
+<script>
+
+    $(function () {
+        if (document.body.scrollTop > 150) {
+            $('.pageUp').css('transform', 'translateX(0)');
+        }
+
+        $(document).scroll(function () {
+            if (parseInt(document.body.scrollTop) > 150) {
+                $('.pageUp').css('transform', 'translateX(0)');
+            } else if (parseInt(document.body.scrollTop) < 150) {
+                $('.pageUp').css('transform', 'translateX(300px)');
+            }
+        });
+
+        $('#pageUp').click(function () {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 800)
+        });
+
+    });
+
+</script>

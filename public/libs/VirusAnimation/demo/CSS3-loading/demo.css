@@ -1,0 +1,71 @@
+/**
+ *
+ *
+ */
+
+main {
+    width: 95%;
+    max-width: 1000px;
+    margin: 4em auto;
+    transition: opacity 0.25s linear;
+    opacity: 1;
+}
+
+main .loaders {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main .loaders .loader {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 25%;
+    max-width: 25%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+/**
+ * Util classes
+ */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.cf, main header {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**
+ * Buttons
+ */
+.btn {
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: transform 0.1s ease-out, border 0.1s ease-out, background-color 0.15s ease-out, color 0.1s ease-out;
+    margin: 2rem 0;
+}
+
+.btn:hover {
+    transform: scale(1.01562);
+    background-color: #fff;
+    color: #ed5565;
+}

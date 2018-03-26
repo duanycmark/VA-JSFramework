@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="author" content="<%= author %>>">
+    <base target="_blank">
+    <link rel="stylesheet" href="./libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/VA-LibStyle.min.css">
+
+    <title><%= title %></title>
+
+</head>
+
+<body ng-controller="indexCtrl" ng-init="documentInit()">
+
+<div class="container-fluid">
+
+    <div class="bs-example V-nav">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#V_navBar_collapse">
+                        <span class="sr-only">VA-Libs</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand V_navBar_brand" href="javascript:;" ng-click="logoSkip()">
+                        <img src="./images/logo.png" alt="logo" title="<%= title %>">
+                    </a>
+                    <span class="label label-default"><%= version %></span>
+                </div>
+
+                <div class="collapse navbar-collapse" id="V_navBar_collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li class="active">
+                            <a href="javascript:;" ng-click="libList.loadList('css')">CSS组件</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" ng-click="libList.loadList('js')">JS组件</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" ng-click="libList.loadList('template')">模板</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" ng-click="libList.downLoadES6Code()">ES6版本下载</a>
+                        </li>
+
+                    </ul>
+
+                    <!--<form class="navbar-form navbar-right" role="search">-->
+                        <!--<div class="input-group">-->
+                            <!--<input type="text" class="form-control" placeholder="Search">-->
+                            <!--<span class="input-group-btn">-->
+                                <!--<button class="btn btn-default" type="button">Go!</button>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</form>-->
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- content-->
+    <div class="row V-container">
+        <div class="col-lg-3" ng-repeat="node in nodeList">
+            <a class="V-css-example" href="{{node.demoHref}}">
+
+                <span class="V-css-example-title" ng-bind="node.name"></span>
+
+                <p class="V-css-example-describe" ng-bind="node.description"></p>
+
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="./libs/jQuery/jquery-2.0.2.min.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="./libs/angular-1.2.5/angular.min.js"></script>
+<script src="./libs/angular-1.2.5/angular-route.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./libs/VirusAnimation/js/VA.js"></script>
+
+
+</body>
+</html>
