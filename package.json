@@ -11,7 +11,7 @@
     "child_process": "^1.0.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "ejs": "~2.3.1",
+    "ejs": "~2.5.5",
     "express": "~4.15.5",
     "fs": "0.0.1-security",
     "jade": "~1.11.0",
