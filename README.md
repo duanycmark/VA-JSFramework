@@ -1,2 +1,5 @@
 # VA-JSFramework
-一套JS框架，主要提供一些DOM的操作。
+`提供便捷的页面使用交互`
+## Start
+* npm install
+* npm run dev
