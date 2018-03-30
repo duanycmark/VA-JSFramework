@@ -1,0 +1,51 @@
+.offlinePage {
+    background-color: #dad8d9;
+}
+
+.offlinePic {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 65px;
+    width: 475px;
+    height: 394px;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.daylight {
+    background-image: url("img/404_daylight.png");
+}
+
+.moonlight {
+    background-image: url("img/404_moonlight.png");
+}
+
+.refresh_button {
+    font-size: 20px;
+    color: white;
+    background: #f3453a;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+}
+
+.center {
+    display: table;
+    width: 100%;
+}
+.v-align {
+    padding: 10px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-lost {
+    font-size: 25px;
+}
+
+.text-showtime {
+    font-size: 16px;
+}
