@@ -71,8 +71,8 @@ angular.module('app', ['ngRoute'])
                     })
             },
 
-            downLoadES6Code: function () {
-                window.open('./downloadCode/VirusAnimation.zip');
+            downLoadCode: function (t) {
+                window.open('./downloadCode/VirusAnimation_ES'+ t +'.zip');
             }
         }
 
