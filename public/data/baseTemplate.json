@@ -1,6 +1,6 @@
 [
   {
-    "name": "单页面应用基础架构(类似于OA系统)",
+    "name": "单页面应用架构(类似于OA系统)",
     "description": "点击查看\n单页面应用\n页面使用less编写样式",
     "demoHref": "./template/fullScreenApp/fullScreen.html"
   }

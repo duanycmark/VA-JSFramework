@@ -1,11 +1,10 @@
-/**
- * VirusAnimation
- *
- * Created by duanyc
- *
- * Versions : 0.5.1
- *
+/*
+ * @Author: duanyc
+ * @Date: 2018-10-26 12:51:36
+ * @Last Modified by: duanyc
+ * @Last Modified time: 2018-05-16 23:05:00
  */
+
 console.time('VirusAnimationJS RunTimer');
 
 /**
