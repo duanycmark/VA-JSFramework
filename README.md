@@ -1,4 +1,4 @@
-# VA-JSFramework
+# va-famework
 一个基于`jQuery`的Dom操作插件。
 
 `项目以文档的形式编写,运行项目即可看到`
